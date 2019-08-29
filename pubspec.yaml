@@ -4,14 +4,22 @@ version: 1.0.0
 author: JLouage (Julien Louage) <info@jlouage.com>
 homepage: https://github.com/jlouage/flutter-carousel-pro
 
-environment:
-  sdk: '>=2.0.0 <3.0.0'
-  flutter: ">=1.2.0 <2.0.0"
+#environment:
+#  sdk: '>=2.0.0 <3.0.0'
+#  flutter_web: ">=1.2.0 <2.0.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
+  flutter_web: any
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  flutter_web_test: any
+
+dependency_overrides:
+  flutter_web:
+    git:
+      url: https://github.com/flutter/flutter_web
+      path: packages/flutter_web
+  flutter_web_test:
+    git:
+      url: https://github.com/flutter/flutter_web
+      path: packages/flutter_web_test
